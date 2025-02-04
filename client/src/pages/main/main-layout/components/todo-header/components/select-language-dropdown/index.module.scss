@@ -1,0 +1,47 @@
+@import "@wildberries/ui-kit/lib/styles/colors.module.scss";
+@import "@wildberries/ui-kit/lib/styles/media.module.scss";
+
+
+.SelectLanguageDropdown {
+  position: relative;
+
+  &__label {
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px $grey300 inset;
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 10px 12px;
+    width: 320px;
+  }
+
+  &__dropdown {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__icon {
+    transition: all .4s;
+
+    &__rotate {
+      transform: rotate(180deg);
+      transition: all .4s;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .SelectLanguageDropdown {
+    &__label {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    &__dropdown {
+      z-index: 2;
+    }
+  }
+}

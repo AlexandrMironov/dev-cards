@@ -1,0 +1,29 @@
+@import "@wildberries/ui-kit/lib/styles/constants.module.scss";
+@import "@wildberries/ui-kit/lib/styles/media.module.scss";
+
+.ToDoHeader {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+
+  &__controls {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+@media #{$mobile} {
+  .ToDoHeader {
+
+    display: block;
+
+
+    &__controls {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+  }
+}
